@@ -1,0 +1,37 @@
+#menu-container {
+	
+	.ut-menu {
+		
+		.header-bg-color.header-font-color.divider-color.menu-header-hideable.menu-header {
+			display: none;
+		}
+		
+		
+		.section {
+			.section-heading {
+				margin-bottom: 3.5em;
+			}
+			
+			.item-title-color {
+				color: $black;				
+			}
+			
+			a.item-title-color {
+				transition: color 0.3s ease;
+
+				&:hover {
+					color: $brand-primary;
+				}
+			}
+
+			
+			.ut-menu-standard .menu-items-container .menu-item .beer .beer-details {
+				
+
+				
+			}
+			
+		}
+	}
+	
+}

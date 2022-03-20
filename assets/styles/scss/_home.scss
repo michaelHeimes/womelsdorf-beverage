@@ -1,0 +1,20 @@
+.home {
+
+	.about {
+		background-color: $light-gray;
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+		.about-copy {
+			p {
+				font-size: rem-calc(20);
+			}
+		}
+	}
+	
+	.cards {
+		.cards-heading {
+			padding-bottom: 1.5rem;
+		}
+	}
+
+}
