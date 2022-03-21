@@ -63,6 +63,8 @@ get_header(); ?>
 					
 				</section>
 				
+				<?php echo do_shortcode( "[booking type=1 nummonths=2 form_type='standard']" );?>
+				
 				<section id="tap-rental" class="entry-content tap-rental rental-row" itemprop="text">
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">

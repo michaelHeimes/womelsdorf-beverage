@@ -50,7 +50,7 @@
 				<?php endif;?>
 			</div>
 			<?php if($description = get_field('short_description')):?>
-				<div class="description">
+				<div class="description-copy">
 					<?php echo $description;?>
 				</div>
 			<?php endif;?>

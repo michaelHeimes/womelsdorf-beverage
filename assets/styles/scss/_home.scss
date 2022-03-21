@@ -23,6 +23,10 @@
 			padding-bottom: 3rem;			
 		}
 		
+	&.featured-brands {
+		padding-top: 6rem;
+	}
+		
 		article {
 			max-width: 370px;
 			@include breakpoint(large) {
@@ -64,7 +68,7 @@
 					}
 				}
 				
-				.description {
+				.description-copy {
 					margin-top: 8px;
 				}
 				
@@ -82,28 +86,33 @@
 		}
 		
 		svg.bg-svg {
+			width: 80%;
 			position: absolute;
 			z-index: -1;
 			top: 3rem;
 			bottom: 3rem;
-			width: 70%;
 			opacity: .03;		
 		}
 					
 		svg.barrel {
+			max-width: 500px;
+			top: -7rem;
 			left: -3rem;
 			right: 0;
 			transform: rotate(20deg);
 		}
 		
 		svg.bottle {
+			max-width: 700px;
+			top: -5rem;
 			right: -15rem;
 			left: auto;			
 			transform: rotate(-20deg);
 		}
 		
 		svg.cheers {
-			width: 50%;
+			max-width: 500px;
+			top: -8rem;
 			left: -3rem;
 			right: 0;
 			transform: rotate(20deg);
