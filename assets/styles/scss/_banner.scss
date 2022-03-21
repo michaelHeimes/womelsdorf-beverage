@@ -1,30 +1,47 @@
 .article-header.docs-banner {
-	margin-bottom: 3rem;
-	@include breakpoint(medium) {
-		margin-bottom: 6rem;
+	margin-bottom: 6rem;
+	@include breakpoint(small only) {
+		.left {
+			margin-bottom: 2rem;
+		}
+		.img-wrap {
+			max-width: 370px;
+			margin: auto;
+			@include breakpoint(medium) {
+				max-width: none;
+			}
+		}
 	}
+	
 	h1 {
 		position: relative;
 		z-index: 0;
 		word-wrap: break-word;
 		background-color: $white;
-		padding: 1.5rem 0;
-		max-width: 70%;
-		margin-bottom: -2rem;
+		padding: 1rem 0;
+		max-width: 370px;
+		margin: 0;
+		
+		@include breakpoint(medium) {
+			padding: 1.5rem 0;
+		}
 		
 		span[style*="text-decoration: underline;"] {
 			text-decoration: none !important;
 			position: relative;
-			display: inline-block;
+			display: inline;
 			
-			&:before {
+			&:after {
 				content: '';
 				position: absolute;
 				z-index: -1;
 				left: .03em;
 				right: .03em;
 				bottom: -.03em;
-				border-bottom: 6px solid get-color(primary);
+				border-bottom: 4px solid get-color(primary);
+				@include breakpoint(medium) {
+					border-bottom: 6px solid get-color(primary);
+				}
 			}
 			
 		}

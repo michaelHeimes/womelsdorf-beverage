@@ -11,7 +11,7 @@
 	<a href="<?php echo $website_url; ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" target="_blank">
 	<?php endif;?> 
 	
-		<header class="article-header" data-equalizer-watch="card-heading">
+		<header class="article-header grid-x align-middle" data-equalizer-watch="card-heading">
 			<h3><?php the_title(); ?></h3>
 		</header> <!-- end article header -->
 						
@@ -24,26 +24,28 @@
 			</div>
 			<?php endif; ?>
 			<div class="classifications">
-				<?php 
-				$terms = get_the_terms( $post->ID , 'classification' );
-				$list = [];
-				foreach ( $terms as $term ) {
-					$term_link = $term->name;
-					if ( ! is_wp_error( $term_link ) )
-						$list[] = $term_link;
-				}
-				echo implode( ' / ', $list );
-				?>
+				<span><b>
+					<?php 
+					$terms = get_the_terms( $post->ID , 'classification' );
+					$list = [];
+					foreach ( $terms as $term ) {
+						$term_link = $term->name;
+						if ( ! is_wp_error( $term_link ) )
+							$list[] = $term_link;
+					}
+					echo implode( ' / ', $list );
+					?>
+				</b></span>
 			</div>
 			<div class="stats grid-x grid-padding-x">
 				<?php if($abv = get_field('abv')):?>
-				<div class="cell small-6">
-					<span>ABV:</span> <?php echo $abv;?>%
+				<div class="cell shrink">
+					<span><b>ABV:</b> <?php echo $abv;?>%</span>
 				</div>
 				<?php endif;?>
 				<?php if($ibu = get_field('ibu')):?>
-				<div class="cell small-6">
-					<span>IBU:</span> <?php echo $ibu;?>
+				<div class="cell shrink">
+					<span><b>IBU:</b> <?php echo $ibu;?></span>
 				</div>
 				<?php endif;?>
 			</div>

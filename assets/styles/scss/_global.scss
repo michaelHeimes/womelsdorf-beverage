@@ -47,6 +47,13 @@ button,
 a.button {
 	cursor: pointer;
 	font-weight: 600;
+	
+&.large {
+	@include breakpoint(small only) {
+		font-size: rem-calc(16);
+	}
+}
+	
 &.beer-button {
 	display: inline-flex;
 	align-items: center;
@@ -80,6 +87,14 @@ a.button {
 	background-color: get-color(secondary);
 }
 	
+}
+
+p.big-copy,
+.big-copy p {
+	font-size: rem-calc(18);
+	@include breakpoint (medium) {
+		font-size: rem-calc(20);
+	}
 }
 
 // Entry content  

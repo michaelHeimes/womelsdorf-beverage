@@ -1,0 +1,66 @@
+.page-template-services {
+	.rental-row {
+		padding-bottom: 6rem;
+		h2 {
+			margin-bottom: 1.75rem;
+		}
+		
+		.row-content {
+			padding-top: 2rem;
+			padding-bottom: 2rem;	
+		}
+		
+		.left {
+			position: relative;
+			z-index: 2;
+			@include breakpoint(small only) {
+				margin-bottom: 1.75rem;
+			}
+		}
+		
+		.right {
+			position: relative;
+			
+			div {
+				position: relative;
+			}
+			
+		&:before {
+			content: '';
+			position: absolute;
+			top: -10rem;
+			bottom: -2rem;
+			right: 0;
+			left: 0;
+			background-color: $light-gray;
+			
+			@include breakpoint(medium) {
+				top: -2rem;
+				left: -40%;
+			}
+			
+		}
+		
+			.inner {
+				width: calc(100% - 40px);
+				margin: auto;
+				
+				.link-wrap {
+					padding-top: 1rem;
+				}
+				
+			}
+			
+		}
+		
+	&:last-child {
+		padding-bottom: 3rem;
+	}
+		
+	}
+	
+	.beer-menu-cta {
+		padding-bottom: 6rem;
+	}
+	
+} 

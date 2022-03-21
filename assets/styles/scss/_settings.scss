@@ -146,7 +146,7 @@ $header-styles: (
   small: (
     'h1': ('font-size': 50),
     'h2': ('font-size': 35),
-    'h3': ('font-size': 19),
+    'h3': ('font-size': 28),
     'h4': ('font-size': 18),
     'h5': ('font-size': 17),
     'h6': ('font-size': 16),
@@ -871,7 +871,7 @@ $xy-grid: true;
 $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
-  small: 20px,
+  small: 30px,
   medium: 30px
 );
 $grid-padding-gutters: $grid-margin-gutters;

@@ -1,9 +1,13 @@
 header.header {
+	z-index: 9;
 	border-bottom: 4px solid transparent;
 	transition: border-color .3s ease;
 	.logo {
-		width: 180px;
+		width: 100px;
 		transition: width .3s ease;
+		@include breakpoint(medium) {
+			width: 180px;
+		}
 	}
 	#main-nav {
 		> li {
@@ -54,6 +58,41 @@ header.header {
 		}
 	}
 	
+	.menu-toggle-wrap {
+
+		a#menu-toggle {
+			padding: 0;
+			width: 36px;
+			height: 36px;
+			position: relative;
+			
+			span {
+				position: absolute;
+				left: 0;
+				right: 0;
+				width: 36px;
+				height: 4px;
+				background-color: get-color(primary);
+				transition: background-color .2s ease;
+				
+				&:nth-child(1) {
+					top: 4px;
+				}
+	
+				&:nth-child(2) {
+					top: 16px;
+				}
+				
+				&:nth-child(3) {
+					bottom: 4px;
+				}
+									
+			}
+			
+		}
+		
+	}
+	
 &.is-stuck {
 	border-color: get-color(secondary);
 	.logo {
@@ -61,4 +100,30 @@ header.header {
 	}
 }	
 
+}
+
+#offcanvas-nav {
+	a {
+		font-weight: 600;
+	}
+	> li {
+		&:first-child {
+			margin-top: 2px;
+		}
+		> a {
+			display: block;
+			padding: .5rem 1rem;
+			margin-top: -2px;
+			border-top: 2px solid get-color(primary);
+			border-bottom: 2px solid get-color(primary);
+		}
+		.submenu {
+			padding: .5rem 0;
+			li {
+				a {
+					padding: .5rem 1rem .5rem 2rem;
+				}
+			}
+		}
+	}
 }

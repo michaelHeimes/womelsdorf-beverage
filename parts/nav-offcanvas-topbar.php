@@ -28,13 +28,15 @@
 						</ul>
 					</nav>
 				</div>
-				<div class="top-bar-right show-for-medium">
+				<div class="top-bar-right cell auto show-for-medium">
 					<?php joints_top_nav(); ?>	
 				</div>
-				<div class="cell auto show-for-small-only">
+				<div class="cell auto show-for-small-only menu-toggle-wrap grid-x align-right align-middle">
 					<ul class="menu">
 						<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
-						<li><a data-toggle="off-canvas"><?php _e( 'Menu', 'jointswp' ); ?></a></li>
+						<li>
+							<a id="menu-toggle" data-toggle="off-canvas" aria-expanded="false" aria-controls="off-canvas"><span></span><span></span><span></span></a>
+						</li>
 					</ul>
 				</div>
 			</div>

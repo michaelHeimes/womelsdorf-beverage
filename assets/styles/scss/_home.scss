@@ -1,20 +1,114 @@
 .home {
-
 	.about {
 		background-color: $light-gray;
-		padding-top: 6rem;
-		padding-bottom: 6rem;
-		.about-copy {
-			p {
-				font-size: rem-calc(20);
-			}
+		padding-top: 3.75rem;
+		padding-bottom: 3rem;
+		margin-bottom: 2.5rem;
+		@include breakpoint(medium) {
+			padding-top: 6rem;
+			padding-bottom: 6rem;			
 		}
 	}
 	
 	.cards {
+		position: relative;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
 		.cards-heading {
 			padding-bottom: 1.5rem;
 		}
+		
+		@include breakpoint(medium) {
+			padding-top: 3rem;
+			padding-bottom: 3rem;			
+		}
+		
+		article {
+			max-width: 370px;
+			@include breakpoint(large) {
+				max-width: none;
+			}
+			a {
+				display: block;
+				background-color: $white;
+				color: $black;
+				border: 5px solid $black;
+				padding: 1.75rem 1.25rem;
+				margin-bottom: calc(.9375rem * 2);
+				transform: scale(1);
+				transition: all .3s ease;
+				
+				.article-header {
+					padding-bottom: 1rem;
+					h3 {
+						line-height: .9;
+					}
+				}
+				
+				.logo-wrap {
+					background-color: $white;
+					padding: .5rem 1rem;
+					margin: 0 0 1.25rem;
+					// border-left: 5px solid get-color(secondary);
+					// border-right: 5px solid get-color(secondary);
+				}
+				
+				.classifications,
+				.stats {
+					margin-bottom: 1rem;
+					span {
+						font-size: rem-calc(14);
+						display: inline-block;
+						padding: 2px 8px;
+						background-color: get-color(secondary);
+					}
+				}
+				
+				.description {
+					margin-top: 8px;
+				}
+				
+			&:hover {
+				border-color: get-color(primary);
+				transform: scale(1.025);
+			}
+				
+			}
+		}
+		
+		.link-wrap {
+			text-align: center;
+			padding-top: .5rem;
+		}
+		
+		svg.bg-svg {
+			position: absolute;
+			z-index: -1;
+			top: 3rem;
+			bottom: 3rem;
+			width: 70%;
+			opacity: .03;		
+		}
+					
+		svg.barrel {
+			left: -3rem;
+			right: 0;
+			transform: rotate(20deg);
+		}
+		
+		svg.bottle {
+			right: -15rem;
+			left: auto;			
+			transform: rotate(-20deg);
+		}
+		
+		svg.cheers {
+			width: 50%;
+			left: -3rem;
+			right: 0;
+			transform: rotate(20deg);
+		}
+		
 	}
 
 }

@@ -11,7 +11,7 @@
 	<a href="<?php echo $website_url; ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" target="_blank">
 	<?php endif;?> 
 	
-		<header class="article-header" data-equalizer-watch="card-heading">
+		<header class="article-header grid-x align-middle" data-equalizer-watch="card-heading">
 			<h3><?php the_title(); ?></h3>
 		</header> <!-- end article header -->
 						
